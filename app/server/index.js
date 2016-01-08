@@ -65,6 +65,8 @@ server.use((req, res, next) => {
 
 const port = process.env.PORT || 3000;
 server.listen(port);
+
+/*eslint no-console: 0*/
 console.log('Application listening on port ' + port);
 
 export default server;
