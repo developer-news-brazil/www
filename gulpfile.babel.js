@@ -6,6 +6,8 @@ import nodemon from './tasks/nodemon';
 import jsLint from './tasks/js-lint';
 import cssLint from './tasks/css-lint';
 
+import cssBuild from './tasks/css-build';
+
 gulp.task('dev-server', devServer);
 gulp.task('nodemon', nodemon);
 gulp.task('dev', ['dev-server', 'nodemon']);
@@ -13,3 +15,5 @@ gulp.task('dev', ['dev-server', 'nodemon']);
 gulp.task('js:lint', jsLint);
 gulp.task('css:lint', cssLint);
 gulp.task('lint', ['js:lint', 'css:lint']);
+
+gulp.task('css:build', cssBuild);
