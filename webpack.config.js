@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var paths = require('./tasks/paths');
 
 var webpackConfig = {
   resolve: {
@@ -9,10 +10,10 @@ var webpackConfig = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './app/client/index.js'
+    paths.js.client
   ],
   output: {
-    path: path.resolve('./build/js'),
+    path: path.resolve(paths.js.dest),
     publicPath: '/public/js/',
     filename: 'main.js'
   },

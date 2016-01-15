@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var paths = require('./tasks/paths');
 
 var webpackConfig = {
   resolve: {
@@ -7,10 +8,10 @@ var webpackConfig = {
     root: path.resolve('.')
   },
   entry: [
-    entry: './app/client/index.js',
+    paths.js.client,
   ],
   output: {
-    path: path.resolve('./build/js'),
+    path: path.resolve(paths.js.dest),
     publicPath: '/public/js/',
     filename: 'main.min.js'
   },
