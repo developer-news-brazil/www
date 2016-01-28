@@ -5,7 +5,7 @@ import Nav from 'app/components/Nav';
 import ApplicationStore from 'app/stores/ApplicationStore';
 import { connectToStores, provideContext } from 'fluxible-addons-react';
 import { handleHistory } from 'fluxible-router';
-import pages from 'configs/routes';
+import pages from 'config/routes';
 
 class Application extends React.Component {
   render() {
