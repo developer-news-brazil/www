@@ -8,6 +8,14 @@ import { handleHistory } from 'fluxible-router';
 import pages from 'config/routes';
 
 class Application extends React.Component {
+  componentDidUpdate(prevProps, prevState) {
+    const newProps = this.props;
+    if (newProps.pageTitle === prevProps.pageTitle) {
+      return;
+    }
+    document.title = newProps.pageTitle;
+  }
+
   render() {
     var Handler = this.props.currentRoute.get('handler');
 
@@ -17,14 +25,6 @@ class Application extends React.Component {
         <Handler />
       </div>
     );
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const newProps = this.props;
-    if (newProps.pageTitle === prevProps.pageTitle) {
-      return;
-    }
-    document.title = newProps.pageTitle;
   }
 }
 
