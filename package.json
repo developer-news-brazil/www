@@ -8,7 +8,8 @@
     "dev": "gulp dev",
     "start": "NODE_PATH=. babel-node start.js",
     "test": "mocha --compilers js:babel-register",
-    "coverage": "babel-node node_modules/babel-istanbul/lib/cli.js cover --report lcov node_modules/mocha/bin/_mocha"
+    "coverage": "babel-node node_modules/babel-istanbul/lib/cli.js cover --report lcov node_modules/mocha/bin/_mocha",
+    "lint": "gulp lint"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
@@ -46,6 +47,7 @@
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "enzyme": "^1.4.1",
+    "eslint-plugin-react": "^3.16.1",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.1",
     "gulp-nodemon": "^2.0.6",

@@ -6,8 +6,19 @@
     "quotes": [2, "single"],
     "no-undef": 2,
     "no-unused-vars": 0, /* see https://github.com/babel/babel-eslint/issues/21 */
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "object-curly-spacing": [2, "always"],
+    "prefer-template": 2,
+    "no-useless-concat": 2,
+
+    "jsx-quotes": 2,
+    "react/jsx-closing-bracket-location": 2,
+    "react/jsx-key": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": 2
   },
+  "plugins": ["react"],
   "env": {
     "node": true,
     "mocha": true,
