@@ -5,10 +5,12 @@ import requireDir from 'require-dir';
 import factoryGirl from 'factory-girl';
 import factorySequelize from 'factory-girl-sequelize';
 
-const factory = factoryGirl.promisify(q);
+import factoriesLoader from './factories/loader';
 
 factorySequelize();
 
-requireDir('./factories');
+const factory = factoryGirl.promisify(q);
+
+factoriesLoader(factory);
 
 export default factory;

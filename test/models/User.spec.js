@@ -5,12 +5,13 @@ import factory from 'test/factory';
 describe('User', () => {
   let user;
 
-  before((done) => {
-    factory.build('user')
-    .then((_user) => {
-      user = _user;
+  before(async (done) => {
+    try {
+      user = await factory.build('user');
       done();
-    }).catch((error) => done(error));
+    } catch(err) {
+      done(err);
+    }
   });
 
   it('should check user\'s email', () => {
