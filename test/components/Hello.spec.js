@@ -1,10 +1,9 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
 
 import React from 'react';
 
-import {shallow} from 'enzyme';
-
-import Hello from '../app/components/Hello';
+import Hello from 'app/components/Hello';
 
 describe('<Hello />', () => {
   let component;

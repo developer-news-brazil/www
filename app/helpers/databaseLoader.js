@@ -13,7 +13,7 @@ const sequelize = new Sequelize(database.database,
 
 const models = {};
 
-const modelsPath = path.join(process.env.NODE_PATH, 'app', 'models');
+const modelsPath = path.resolve(__dirname, '..', 'models');
 
 fs.readdirSync(modelsPath)
   .filter((file) => file.indexOf('.') !== 0 && file.indexOf('index.js') !== 0)

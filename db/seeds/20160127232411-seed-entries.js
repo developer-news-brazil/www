@@ -2,7 +2,7 @@
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    var Faker = require('Faker');
+    var Faker = require('faker');
 
     var entries = [];
 
