@@ -41,3 +41,13 @@ To run the app in development mode, use:
 ```sh
   npm run dev
 ```
+
+## Tests
+
+To run the tests, first setup the test database described on `config/database.js`.
+
+After that, you must run:
+
+```
+  npm test
+```
