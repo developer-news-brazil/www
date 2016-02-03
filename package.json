@@ -41,14 +41,14 @@
     "serve-favicon": "^2.1.6"
   },
   "devDependencies": {
-    "babel-eslint": "^3.0.1",
+    "babel-eslint": "^4.1.8",
     "babel-istanbul": "^0.6.0",
     "babel-loader": "^6.2.1",
     "babel-polyfill": "^6.3.14",
     "bundle-loader": "^0.5.0",
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
-    "enzyme": "^1.4.1",
+    "enzyme": "^1.5.0",
     "eslint-plugin-react": "^3.16.1",
     "factory-girl": "^2.2.2",
     "factory-girl-sequelize": "^1.0.0",
