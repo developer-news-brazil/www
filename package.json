@@ -9,7 +9,8 @@
     "start": "NODE_PATH=. babel-node start.js",
     "test": "cross-env NODE_PATH=. NODE_ENV=test mocha --compilers js:babel-register --recursive --require babel-polyfill",
     "coverage": "cross-env NODE_PATH=. babel-node node_modules/babel-istanbul/lib/cli.js cover --report lcov node_modules/mocha/bin/_mocha",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | NODE_ENV=test ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
@@ -48,6 +49,7 @@
     "bundle-loader": "^0.5.0",
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
+    "coveralls": "^2.11.6",
     "enzyme": "^1.5.0",
     "eslint-plugin-react": "^3.16.1",
     "factory-girl": "^2.2.2",
