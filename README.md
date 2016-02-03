@@ -1,6 +1,6 @@
 # Developers Brasil
 
-[![Build Status](https://travis-ci.org/developer-news-brazil/www.svg?branch=feat/setup-ci-and-coverals)](https://travis-ci.org/developer-news-brazil/www) [![Coverage Status](https://coveralls.io/repos/github/developer-news-brazil/www/badge.svg?branch=feat/setup-ci-and-coverals)](https://coveralls.io/github/developer-news-brazil/www?branch=feat/setup-ci-and-coverals)
+[![Build Status](https://travis-ci.org/developer-news-brazil/www.svg?branch=master)](https://travis-ci.org/developer-news-brazil/www) [![Coverage Status](https://coveralls.io/repos/github/developer-news-brazil/www/badge.svg?branch=master)](https://coveralls.io/github/developer-news-brazil/www?branch=master)
 
 ## Setup
 
