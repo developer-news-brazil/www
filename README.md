@@ -1,5 +1,7 @@
 # Developers Brasil
 
+[![Build Status](https://travis-ci.org/developer-news-brazil/www.svg?branch=feat/setup-ci-and-coverals)](https://travis-ci.org/developer-news-brazil/www)
+
 ## Setup
 
 ### Node
