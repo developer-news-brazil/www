@@ -5,7 +5,7 @@ import nodemon from 'gulp-nodemon';
 export default () => {
   nodemon({
     script: 'start.js',
-    exec: 'babel-node',
+    exec: './node_modules/.bin/babel-node',
     ext: 'js jsx',
     env: {
       PORT: process.env.PORT || 3001,
