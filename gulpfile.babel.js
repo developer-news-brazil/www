@@ -13,7 +13,7 @@ gulp.task('js:lint', jsLint);
 gulp.task('css:lint', cssLint);
 gulp.task('lint', ['js:lint', 'css:lint']);
 
-gulp.task('css:build', cssBuild);
+gulp.task('css:build', ['css:lint'], cssBuild);
 gulp.task('css:watch', ['css:build'], cssWatch);
 
 gulp.task('dev-server', devServer);

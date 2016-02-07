@@ -14,6 +14,6 @@ export default () => {
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .on('error', errorHandler)
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest));
 };
