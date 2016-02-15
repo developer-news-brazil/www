@@ -11,20 +11,27 @@ class Nav extends React.Component {
       var link = links[name];
 
       if (selected && selected.get('name') === name) {
-        className = 'pure-menu-selected';
+        className = 'active';
       }
 
       return (
         <li className={className} key={link.path}>
-          <NavLink routeName={ link.page } activeStyle={{ backgroundColor: '#eee' }}>{link.title}</NavLink>
+          <NavLink routeName={ link.page }>{link.title}</NavLink>
         </li>
       );
     });
 
     return (
-      <ul className="pure-menu pure-menu-open pure-menu-horizontal">
-        {linkHTML}
-      </ul>
+      <header className="header">
+        <div className="container">
+          <a href="/" className="logo">
+            <img className="img" src="/public/img/logo.png" />
+          </a>
+          <nav className="navigation">
+            {linkHTML}
+          </nav>
+        </div>
+      </header>
     );
   }
 }

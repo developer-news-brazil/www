@@ -7,7 +7,7 @@ import serverRenderingHandler from 'app/middlewares/serverRenderingHandler';
 
 const server = express();
 
-server.use('/public', express.static(path.join(__dirname, '/build')));
+server.use('/public', express.static(path.join(__dirname, '../../build')));
 
 server.use(compression());
 server.use(bodyParser.json());

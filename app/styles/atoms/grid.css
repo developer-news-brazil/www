@@ -1,0 +1,58 @@
+.container,
+.container-fluid {
+  @mixin clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc($gutter-width / 2);
+  padding-right: calc($gutter-width / 2);
+}
+
+.row {
+  @mixin clearfix;
+  box-sizing: border-box;
+  margin-left: -calc($gutter-width / 2);
+  margin-right: -calc($gutter-width / 2);
+}
+
+@each $breakpoint, $custom-media, $screen-size in (xs, sm, md, lg, xl), (--extra-small, --small, --medium, --large, --extra-large), (100%, 100%, calc($breakpoint-sm + 1px), calc($breakpoint-md + 1px), calc($breakpoint-lg + 1px)) {
+
+  @for $column from 1 to 12 {
+
+    .col-$(breakpoint)-$(column) {
+      @mixin column-base;
+    }
+
+    .col-$(breakpoint)-push-$(column), .col-$(breakpoint)-pull-$(column) {
+      @mixin push-pull-grid;
+    }
+  }
+
+  @media ($custom-media) {
+
+    .container {
+      width: $screen-size;
+    }
+
+    @for $column from 1 to 12 {
+
+      .col-$(breakpoint)-$(column) {
+        @mixin getSize $columns, $(column), width;
+      }
+
+      .col-$(breakpoint)-push-$(column) {
+        @mixin getSize $columns, $(column), left;
+      }
+
+      .col-$(breakpoint)-pull-$(column) {
+        @mixin getSize $columns, $(column), right;
+      }
+    }
+
+    @for $column from 0 to 12 {
+
+      .col-$(breakpoint)-offset-$(column) {
+        @mixin getSize $columns, $(column), margin-left;
+      }
+    }
+  }
+}

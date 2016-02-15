@@ -10,5 +10,10 @@ module.exports = {
     glob: 'app/styles/**/*.css',
     main: 'app/styles/main.css',
     dest: 'build/css/'
+  },
+  img: {
+    src: 'app/images/',
+    glob: 'app/images/**/*.png',
+    dest: 'build/img'
   }
 };

@@ -1,17 +1,28 @@
-import imports from 'postcss-import';
-import vars from 'postcss-simple-vars';
-import nested from 'postcss-nested';
-import extend from 'postcss-extend';
-import lost from 'lost';
+
+import postcssImport from 'postcss-import';
+import postcssFor from 'postcss-for';
+import postcssEach from 'postcss-each';
+import postcssSimpleVars from 'postcss-simple-vars';
+import postcssCalc from 'postcss-calc';
+import postcssColorFunction from 'postcss-color-function';
+import postcssCustomMedia from 'postcss-custom-media';
+import postcssNested from 'postcss-nested';
+import postcssMixins from 'postcss-mixins';
 import autoprefixer from 'autoprefixer';
-import nano from 'cssnano';
+import cssnano from 'cssnano';
 
 export default [
-  imports,
-  vars,
-  nested,
-  extend,
-  lost,
-  autoprefixer,
-  nano
+  postcssImport,
+  postcssMixins,
+  postcssEach,
+  postcssFor,
+  postcssSimpleVars,
+  postcssCalc({ mediaQueries: true }),
+  postcssNested,
+  postcssColorFunction,
+  postcssCustomMedia,
+  autoprefixer({
+    browsers: ['last 3 versions']
+  }),
+  cssnano
 ];

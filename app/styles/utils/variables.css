@@ -1,0 +1,14 @@
+$color-primary: #1b9da5;
+$color-secondary: #ff8c28;
+$color-default: #d2d2d2;
+$color-dark: #000000;
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1120px;
+$breakpoint-xl: 1280px;
+
+$columns: 12;
+$gutter-width: 20px;
+$grid-limit: 980px;
