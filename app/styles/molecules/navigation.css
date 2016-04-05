@@ -1,4 +1,31 @@
 .navigation {
   display: inline-block;
   vertical-align: top;
+
+  .navigation-item {
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+
+    a {
+      color: color($color-primary a(70%));
+      transition: color ease-in-out .3s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+
+      a {
+        color: $color-primary;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
 }

@@ -1,9 +1,14 @@
 .header {
-  border-bottom: 2px solid $color-default;
+  border-bottom: 1px solid $color-default;
   padding: 15px 0;
 
   .logo {
     border-right: 1px solid $color-default;
+    margin-right: 10px;
     padding-right: 10px;
+  }
+
+  .navigation {
+    margin-top: 16px;
   }
 }

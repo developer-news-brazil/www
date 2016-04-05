@@ -7,11 +7,11 @@ class Nav extends React.Component {
     const links = this.props.links;
 
     const linkHTML = Object.keys(links).map((name) => {
-      var className = '';
+      var className = 'navigation-item';
       var link = links[name];
 
       if (selected && selected.get('name') === name) {
-        className = 'active';
+        className += ' active';
       }
 
       return (
